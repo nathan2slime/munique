@@ -1,0 +1,14 @@
+enum Status {
+    ACTIVE
+    IN_REVIEW
+    COMPLETE
+}
+
+model Document {
+    id String @unique @default(cuid())
+    name   String
+    status Status @default(ACTIVE)
+
+    userId String
+    user   User   @relation(fields: [userId], references: [id])
+}

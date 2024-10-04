@@ -1,0 +1,7 @@
+model User {
+    id    String @unique @default(cuid())
+    name  String @db.VarChar(255)
+    email String
+
+    documents Document[]
+}
