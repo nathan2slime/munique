@@ -1,13 +1,15 @@
-enum Status {
-    ACTIVE
-    IN_REVIEW
-    COMPLETE
-}
+// You defined the enum `Status`. But the current connector does not support enums
+// enum Status {
+//     ACTIVE
+//     IN_REVIEW
+//     COMPLETE
+// }
 
 model Document {
-    id String @unique @default(cuid())
+    id     String @unique @default(cuid())
     name   String
-    status Status @default(ACTIVE)
+    status String @default("ACTIVE")
+    // status Status @default(ACTIVE)
 
     userId String
     user   User   @relation(fields: [userId], references: [id])
