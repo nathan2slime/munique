@@ -6,7 +6,7 @@
 // }
 
 model Document {
-    id     String @unique @default(cuid())
+    id     String @unique @default(uuid())
     name   String
     status String @default("ACTIVE")
     // status Status @default(ACTIVE)

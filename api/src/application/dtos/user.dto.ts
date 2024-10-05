@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsOptional } from 'class-validator'
+import { IsEmail, IsNotEmpty, IsOptional, IsUUID } from 'class-validator'
 
 export class CreateUserDto {
   @IsEmail()
@@ -10,9 +10,11 @@ export class CreateUserDto {
 
 export class UpdateUserDto {
   @IsOptional()
-  @IsEmail()
-  email: string
-
-  @IsOptional()
   name: string
 }
+
+export class UserIdDto {
+  @IsUUID()
+  id: string
+}
+

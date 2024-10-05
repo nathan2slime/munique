@@ -1,5 +1,5 @@
 model User {
-    id    String @unique @default(cuid())
+    id    String @unique @default(uuid())
     // Native type VarChar is not supported for sqlite connector.
     // name  String @db.VarChar(255)
     name  String

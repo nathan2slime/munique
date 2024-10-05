@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+*.db
+
+# output
+dist
+
+# env files
+.env.local
