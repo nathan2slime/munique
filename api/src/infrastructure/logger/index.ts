@@ -1,6 +1,6 @@
-import pino from 'pino'
+import pino, { LoggerOptions } from 'pino'
 
-const config = {
+const config: LoggerOptions = {
   transport: {
     target: 'pino-pretty',
     options: {
@@ -8,4 +8,5 @@ const config = {
     }
   }
 }
+
 export const logger = pino(config)
