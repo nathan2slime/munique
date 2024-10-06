@@ -12,6 +12,7 @@ export const { NODE_ENV } = parseEnv(process.env, {
 
 const envSchema = {
   DATABASE_URL: z.string().url(),
+  HOST: z.string().url(),
   PORT: z.string().min(1).default('3000'),
 }
 
