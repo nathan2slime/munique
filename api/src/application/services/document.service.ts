@@ -13,7 +13,10 @@ export class DocumentService {
 
     if (user) {
       return db.document.create({
-        data: { ...data, user: { connect: { id: userId } } }
+        data: { ...data, user: { connect: { id: userId } } },
+        include: {
+          user: true
+        }
       })
     }
 
