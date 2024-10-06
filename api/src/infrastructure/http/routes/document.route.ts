@@ -47,8 +47,6 @@ export const documentRouter: Router = Router()
  *         status:
  *           type: string
  *           example: "active"
- *         user:
- *             $ref: '#/components/schemas/User'
  *         id:
  *           type: string
  *           example: "74151ac9-7b82-4d39-aee2-0e4dc992818f"
