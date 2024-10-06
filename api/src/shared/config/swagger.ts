@@ -1,5 +1,7 @@
 import jsdoc, { Options } from 'swagger-jsdoc'
 
+import { env } from '~/shared/config/env'
+
 const config: Options = {
   swaggerDefinition: {
     info: {
@@ -9,7 +11,7 @@ const config: Options = {
     openapi: '3.0.0',
     servers: [
       {
-        url: 'http://localhost:8080/api',
+        url: env.HOST,
       }
     ]
   },
