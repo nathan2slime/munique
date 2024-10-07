@@ -25,4 +25,4 @@ FROM base
 COPY --from=prod-deps /app/node_modules /app/node_modules
 COPY --from=build /app/dist /app/dist
 EXPOSE 8080
-CMD pnpm db:push && pnpm start
+CMD ["pnpm", "start"]
