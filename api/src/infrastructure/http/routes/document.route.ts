@@ -107,8 +107,8 @@ documentRouter.post(
  * @swagger
  * /document/delete/{id}:
  *   delete:
- *     summary: Delete user.
- *     description: Delete user by id.
+ *     summary: Delete document.
+ *     description: Delete document by id.
  *     tags:
  *         - Documents
  *     parameters:
