@@ -1,21 +1,26 @@
-import { IsEmail, IsNotEmpty, IsOptional, IsUUID } from 'class-validator'
+import { IsEmail, IsNotEmpty, IsOptional, IsString, IsUUID } from 'class-validator'
 
 export class CreateDocumentDto {
   @IsNotEmpty()
+  @IsString()
   name: string
 
   @IsNotEmpty()
+  @IsString()
   status: string
 
   @IsNotEmpty()
+  @IsUUID()
   userId: string
 }
 
 export class UpdateDocumentDto {
-  @IsNotEmpty()
+  @IsOptional()
+  @IsString()
   name: string
 
-  @IsNotEmpty()
+  @IsOptional()
+  @IsString()
   status: string
 }
 

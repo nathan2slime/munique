@@ -182,7 +182,7 @@ documentRouter.put(
 
 /**
  * @swagger
- * /user/show:
+ * /document/show:
  *   get:
  *     summary: Get all documents.
  *     description: Get all documents.

@@ -7,8 +7,13 @@ export const errorMiddleware = (
   res: Response,
   _next: NextFunction
 ) => {
-  res
-    .status(error.status)
-    .json({ status: error.status, message: error.message })
-}
+  if (error.status) {
+    res
+      .status(error.status)
+      .json({ status: error.status, message: error.message })
 
+    return
+  }
+
+  res.status(500).json({ status: 500, message: 'Internal Server Error' })
+}
